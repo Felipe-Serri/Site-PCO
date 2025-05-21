@@ -13,11 +13,13 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
+    
 }
 
 body {
     background-color: var(--primary-bg);
     color: var(--text-color);
+     overflow-x: hidden;
 }
 
 .container {
@@ -519,10 +521,14 @@ nav {
     color: var(--primary-dark);
 }
  .carousel-container {
-            width: 100%;
+
+            width: 100vw;
             max-width: 1200px;
             overflow: hidden;
             position: relative;
+            margin: 0 -15px;
+            transform: translateX(-50%);
+
         }
 
         .carousel {
