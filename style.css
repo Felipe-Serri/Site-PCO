@@ -34,6 +34,14 @@ header {
     position: sticky;
     top: 0;
     z-index: 100;
+    width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 .logo-container {
@@ -58,12 +66,14 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15px;
+    width: 100%;
 }
 
 .nav-links {
     display: flex;
     gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -122,6 +132,81 @@ nav {
     transition: all 0.3s;
 }
 
+.mobile-contact-btn {
+    display: none;
+}
+
+/* Estilos responsivos para telas menores (celulares) */
+@media screen and (max-width: 768px) {
+    nav {
+        position: relative;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        z-index: 101;
+    }
+    
+    /* Animação para o ícone do menu hambúrguer */
+    .menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: var(--primary-white);
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        z-index: 99;
+    }
+    
+    .nav-links.active {
+        display: flex;
+        padding: 20px 0;
+    }
+    
+    .nav-links a {
+        margin: 10px 0;
+    }
+    
+    .contact-btn {
+        display: none;
+    }
+    
+    .mobile-contact-btn {
+        display: block; 
+        color:var(--primary-bg);
+        background-color: var(--primary-dark);
+
+        padding: 10px 22px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        border: 2px solid var(--primary-dark);
+        margin-top: 15px;
+    }
+    
+    .mobile-contact-btn:hover {
+        background-color: var(--primary-yellow);
+        color: var(--primary-dark);
+    }
+}
 /* Hero Section */
 .hero {
     background-image: url(/Img/inovação-gestao.png);

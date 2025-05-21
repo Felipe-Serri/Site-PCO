@@ -1,26 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/Contato.css">
+    <title>Contato via WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+        }
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 8px 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: background-color 0.3s;
+        }
+        .back-button:hover {
+            background-color: #e9ecef;
+        }
+        h1 {
+            color: #075e54;
+            text-align: center;
+        }
+        .form-container {
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        .whatsapp-button {
+            background-color: #25d366;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 10px 15px;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .whatsapp-button:hover {
+            background-color: #128c7e;
+        }
+        .whatsapp-icon {
+            margin-right: 10px;
+        }
+        .direct-contact {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Fale conosco</h1>
-        <p>Obrigado pelo seu interesse. Digite seu nome e email para que possamos conectá-lo com alguém de nossa equipe.</p>
-        <form>
-            <input type="text" placeholder="Nome completo" required>
-            <input type="email" placeholder="Email" required>
-            <input type="text" placeholder="Assunto" required>
-            <textarea placeholder="Sua mensagem" required></textarea>
-            <div class="button-container">
-                <button type="button" class="back-button" onclick="history.back()">Voltar</button>
-                <button type="submit">Enviar</button>
-            </div>
-        </form>
+    <button class="back-button" onclick="goBack()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#333">
+            <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/>
+        </svg>
+        <span style="margin-left: 5px;">Voltar</span>
+    </button>
+
+    <h1>Entre em Contato</h1>
+    
+    <div class="form-container">
+        <div class="form-group">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" placeholder="Digite seu nome">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">Mensagem:</label>
+            <textarea id="message" placeholder="Digite sua mensagem"></textarea>
+        </div>
+        
+        <button class="whatsapp-button" onclick="sendWhatsAppMessage()">
+            <span class="whatsapp-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white">
+                    <path d="M17.498 14.382c-.301-.15-1.767-.867-2.04-.966-.273-.101-.473-.15-.673.15-.197.295-.771.964-.944 1.162-.175.195-.349.21-.646.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.485.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.571-.347m-5.498-11.382c-4.963 0-9 4.037-9 9s4.037 9 9 9 9-4.037 9-9-4.037-9-9-9m0 16.2c-3.972 0-7.2-3.228-7.2-7.2s3.228-7.2 7.2-7.2 7.2 3.228 7.2 7.2-3.228 7.2-7.2 7.2"/>
+                </svg>
+            </span>
+            Enviar Mensagem via WhatsApp
+        </button>
     </div>
+    
+   
+    <script>
+       
+    function sendWhatsAppMessage() {
+    const phoneNumber = "5581983261747"; // Exemplo: DDI + DDD + número
+    const message = encodeURIComponent("Olá, gostaria de mais informações!");
+    const url = `https://wa.me/${phoneNumber}?text=${message}`;
+    window.open(url, "_blank");
+}
+        
+        function goBack() {
+            window.history.back();
+        }
+    </script>
 </body>
 
 </html>

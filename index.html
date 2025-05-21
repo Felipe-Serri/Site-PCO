@@ -5,37 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PCO - Power Code Organization</title>
     <link rel="stylesheet" href="/style.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <nav>
-                <div class="logo-container">
-                    <img src="./Img/LOGO_PCO_sem_fundo.png" class="logo">
-                    <div class="logo-text"></div>
-                </div>
-                <div class="menu-toggle" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="nav-links" id="navLinks">
-                    <a href="#sobre">Sobre</a>
-                    <a href="#servicos">Serviços</a>
-                    <a href="#produtos">Produtos</a>
-                    <a href="#tecnologia">Tecnologia</a>
-                    <a href="#equipe">Equipe</a>
-                </div>
-                <a href="/contato.html" class="contact-btn">Entre em Contato</a>
-            </nav>
-        </div>
-    </header>
+  <header>
+    <div class="container">
+        <nav>
+            <div class="logo-container">
+                <img src="./Img/LOGO_PCO_sem_fundo.png" class="logo">
+                <div class="logo-text"></div>
+            </div>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="#sobre">Sobre</a>
+                <a href="#servicos">Serviços</a>
+                <a href="#produtos">Produtos</a>
+                <a href="#tecnologia">Tecnologia</a>
+                <a href="#equipe">Equipe</a>
+                <a href="/contato.html" class="mobile-contact-btn" style="color: aliceblue;">Entre em Contato</a>
+            </div>
+            <a href="/contato.html" class="contact-btn">Entre em Contato</a>
+        </nav>
+    </div>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+    
+    if (menuToggle && navLinks) {
+        menuToggle.addEventListener('click', function() {
+            menuToggle.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+    }
+});
+</script>
+</header>
 
     <section class="hero">
         <div class="container">
             <div class="hero-content fade-in">
                 <h1>Inovação e <span>Tecnologia</span> para seu negócio</h1>
-                <a href="#saiba-mais" class="cta-btn">Saiba Mais</a>
+                <a href="#produtos" class="cta-btn">Saiba Mais</a>
             </div>
         </div>
     </section>
@@ -102,14 +120,14 @@
                 <div class="product-info">
                     <h3 class="product-title">Meu Tempo</h3>
                     <p class="product-desc">
-                        Nosso aplicativo de gestão de tempo foi criado para ajudar você a planejar suas tarefas com eficiência e alcançar seus objetivos. Com uma interface intuitiva e moderna, ele permite:
+                        Nosso aplicativo de gestão de tempo, já em produção, foi criado para ajudar você a planejar suas tarefas com eficiência e alcançar seus objetivos. Com uma interface intuitiva e moderna, ele permite:
                     </p>
                     <ul class="product-features">
-                        <li>Criar e organizar tarefas diárias</li>
-                        <li>Acompanhar seu progresso com relatórios detalhados</li>
-                        <li>Receber lembretes para manter o foco</li>
-                        <li>Visualizar compromissos no calendário integrado</li>
-                        <li>Transforme sua rotina e maximize sua produtividade com praticidade e inovação!</li>
+                        <p>● Criar e organizar tarefas diárias</p>
+                        <p>● Acompanhar seu progresso com relatórios detalhados</p>
+                        <p>● Receber lembretes para manter o foco</p>
+                        <p>● Visualizar compromissos no calendário integrado</p>
+                        <p>● Transforme sua rotina e maximize sua produtividade com praticidade e inovação!</p>
                     </ul>
                 </div>
             </div>
@@ -214,7 +232,7 @@
                     <img src="/Img/Bruno. perfil .jpg" alt="Membro da equipe" class="card-imagem">
                     <div class="card-info">
                         <h3 class="card-nome">Bruno Álexys</h3>
-                        <p class="card-funcao">Desenvolvedor, responsável pelo desenvolvimento e manutenção da lógica de sistemas.</p>
+                        <p class="card-funcao">Engenheiro de software, responsável pelo desenvolvimento e manutenção da lógica de sistemas.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -228,14 +246,14 @@
                     <img src="/Img/João.jpg" alt="Membro da equipe" class="card-imagem">
                     <div class="card-info">
                         <h3 class="card-nome">João Aguiar</h3>
-                        <p class="card-funcao">QA e Gerente de Projetos, especializado em metodologias ágeis e otimização de processos empresariais.</p>
+                        <p class="card-funcao">Gerente de Projetos e QA , especializado em metodologias ágeis e qualidade de software.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/api/placeholder/300/400" alt="Membro da equipe" class="card-imagem">
+                    <img src="/Img/Imagem do WhatsApp de 2025-05-19 à(s) 23.56.04_ba5d0a12.jpg" alt="Membro da equipe" class="card-imagem">
                     <div class="card-info">
                         <h3 class="card-nome">Marcos Pereira</h3>
-                        <p class="card-funcao">Desenvolvedor, responsável pelo desenvolvimento e manutenção da lógica de sistemas.</p>
+                        <p class="card-funcao">Engenheiro de software, responsável pelo desenvolvimento e manutenção da lógica de sistemas.</p>
                     </div>
                 </div>
                 <div class="card">
@@ -246,7 +264,7 @@
                     </div>
                 </div>
                 <div class="card">
-                    <img src="/api/placeholder/300/400" alt="Membro da equipe" class="card-imagem">
+                    <img src="/Img/Raony.perfil .jpg" alt="Membro da equipe" class="card-imagem">
                     <div class="card-info">
                         <h3 class="card-nome">Raony Cavalcanti</h3>
                         <p class="card-funcao">Designer UX/UI responsável pela criação de interfaces intuitivas e experiências digitais inovadoras.</p>
@@ -262,33 +280,15 @@
             <div class="footer-container">
                 <div class="footer-left">
                     <div class="footer-links">
-                        <a href="#lgpd">LGPD</a>
-                        <a href="#termos">Termos de Serviço</a>
+                        <a href="#sobre">Sobre</a>
+                        <a href="#servicos">Serviços</a>
+                        <a href="#produtos">Produtos</a>
+                        <a href="#tecnologia">Tecnologia</a>
+                        <a href="#equipe">Equipe</a>
                     </div>
                     <p class="footer-text">PCO. 2025. All rights reserved.</p>
                 </div>
                 <div class="footer-right">
-                    <div class="social-icons">
-                        <a href="#instagram" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-                            </svg>
-                        </a>
-                        <a href="#linkedin" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                                <rect x="2" y="9" width="4" height="12"></rect>
-                                <circle cx="4" cy="4" r="2"></circle>
-                            </svg>
-                        </a>
-                        <a href="#github" class="social-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 2C6.48 2 2 6.48 2 12c0 4.42 2.87 8.17 6.84 9.49.5.09.66-.22.66-.48 0-.24-.01-.87-.01-1.7-2.78.61-3.37-1.34-3.37-1.34-.45-1.15-1.1-1.46-1.1-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.67-.1-.26-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85.004 1.71.115 2.51.337 1.9-1.29 2.74-1.02 2.74-1.02.56 1.38.21 2.39.11 2.65.64.69 1.03 1.58 1.03 2.67 0 3.85-2.34 4.7-4.57 4.95.36.31.68.93.68 1.88 0 1.36-.01 2.45-.01 2.78 0 .26.17.58.68.48A10.02 10.02 0 0 0 22 12c0-5.52-4.48-10-10-10z"></path>
-                            </svg>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>
