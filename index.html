@@ -134,92 +134,131 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </section>
 
-    <section class="technologies" id="tecnologia">
+    <section class="technologies" id="tecnologia" style="background-color: #f7f5f0;">
         <div class="container">
             <div class="section-header">
                 <h2>Tecnologias</h2>
             </div>
         
             <div class="tech-carousel">
-                <div class="tech-track">
-                   
-                    <div class="tech-card">
-                        <img src="/Img/google-flutter-512.png" alt="Flutter" class="tech-logo">
-                        <div class="tech-name">Flutter</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/117-1171017_spring-logo-spring-framework-logo.png" alt="Spring Boot" class="tech-logo">
-                        <div class="tech-name">Spring Boot</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/github.png" alt="GitHub" class="tech-logo">
-                        <div class="tech-name">GitHub</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/Apps-Trello-1024x1024.png" alt="Trello" class="tech-logo">
-                        <div class="tech-name">Trello</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="figma" class="tech-logo">
-                        <div class="tech-name">Figma</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/Couch.webp" alt="Couchbase" class="tech-logo">
-                        <div class="tech-name">Couchbase</div>
-                    </div>
-                    
-                    <div class="tech-card">
-                        <img src="/Img/google-flutter-512.png" alt="Flutter" class="tech-logo">
-                        <div class="tech-name">Flutter</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/117-1171017_spring-logo-spring-framework-logo.png" alt="Spring Boot" class="tech-logo">
-                        <div class="tech-name">Spring Boot</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/github.png" alt="GitHub" class="tech-logo">
-                        <div class="tech-name">GitHub</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/Apps-Trello-1024x1024.png" alt="Trello" class="tech-logo">
-                        <div class="tech-name">Trello</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="figma" class="tech-logo">
-                        <div class="tech-name">Figma</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/Couch.webp" alt="Couchbase" class="tech-logo">
-                        <div class="tech-name">Couchbase</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/google-flutter-512.png" alt="Flutter" class="tech-logo">
-                        <div class="tech-name">Flutter</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/117-1171017_spring-logo-spring-framework-logo.png" alt="Spring Boot" class="tech-logo">
-                        <div class="tech-name">Spring Boot</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/github.png" alt="GitHub" class="tech-logo">
-                        <div class="tech-name">GitHub</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/Apps-Trello-1024x1024.png" alt="Trello" class="tech-logo">
-                        <div class="tech-name">Trello</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="figma" class="tech-logo">
-                        <div class="tech-name">Figma</div>
-                    </div>
-                    <div class="tech-card">
-                        <img src="/Img/Couch.webp" alt="Couchbase" class="tech-logo">
-                        <div class="tech-name">Couchbase</div>
-                    </div>
-                </div>
+                <div class="carousel" id="tech-carousel">
+            <div class="carousel-item">
+                <img src="/Img/117-1171017_spring-logo-spring-framework-logo.png" alt="Spring Boot">
+                <h3>Spring Boot</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="Figma">
+                <h3>Figma</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/Apps-Trello-1024x1024.png" alt="Trello">
+                <h3>Trello</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/Couch.webp" alt="Couchbase">
+                <h3>Couchbase</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/github.png" alt="GitHub">
+                <h3>GitHub</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/google-flutter-256.png" alt="Flutter">
+                <h3>Flutter</h3>
+            </div>
+            <!-- Duplicados para criar efeito de carrossel infinito -->
+            <div class="carousel-item">
+                <img src="/Img/117-1171017_spring-logo-spring-framework-logo.png" alt="Spring Boot">
+                <h3>Spring Boot</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/apps-figma-icon-2048x2048-ctjj5ab7.png" alt="Figma">
+                <h3>Figma</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/Apps-Trello-1024x1024.png" alt="Trello">
+                <h3>Trello</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/Couch.webp" alt="Couchbase">
+                <h3>Couchbase</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/github.png" alt="GitHub">
+                <h3>GitHub</h3>
+            </div>
+            <div class="carousel-item">
+                <img src="/Img/google-flutter-256.png" alt="Flutter">
+                <h3>Flutter</h3>
             </div>
         </div>
-        </section>
+            </div>
+        </div>
+         <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('tech-carousel');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            
+            // Calcula largura total dos itens originais
+            const itemWidth = carouselItems[0].offsetWidth + 
+                              parseInt(window.getComputedStyle(carouselItems[0]).marginLeft) + 
+                              parseInt(window.getComputedStyle(carouselItems[0]).marginRight);
+            
+            let position = 0;
+            let isPaused = false;
+            const speed = 1; // Velocidade do movimento (pixels por frame)
+
+            function moveCarousel() {
+                if (!isPaused) {
+                    position -= speed;
+                    
+                    // Reset posição quando todos os itens originais passarem
+                    if (Math.abs(position) >= itemWidth * 6) {
+                        position = 0;
+                    }
+                    
+                    carousel.style.transform = `translateX(${position}px)`;
+                }
+                
+                // Importante: sempre solicitar o próximo frame para manter o carrossel em movimento
+                requestAnimationFrame(moveCarousel);
+            }
+
+            // Inicia o carrossel
+            requestAnimationFrame(moveCarousel);
+
+            // Para o carrossel quando o mouse estiver sobre ele
+            carousel.addEventListener('mouseenter', function() {
+                isPaused = true;
+            });
+
+            // Continua o carrossel quando o mouse sair
+            carousel.addEventListener('mouseleave', function() {
+                isPaused = false;
+            });
+
+            // Para dispositivos de toque
+            carousel.addEventListener('touchstart', function() {
+                isPaused = true;
+            });
+
+            carousel.addEventListener('touchend', function() {
+                isPaused = false;
+            });
+
+            // Responsividade - reinicia o carrossel quando a janela é redimensionada
+            window.addEventListener('resize', function() {
+                position = 0;
+                carousel.style.transform = `translateX(${position}px)`;
+            });
+            
+            // Garante que o carrossel continue funcionando mesmo quando a aba não está visível
+            document.addEventListener('visibilitychange', function() {
+                isPaused = document.hidden;
+            });
+        });
+         </script>
+ </section>
 
     <section class="team" id="equipe"> 
         <div class="titulo">

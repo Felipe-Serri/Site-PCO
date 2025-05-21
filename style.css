@@ -189,10 +189,9 @@ nav {
     }
     
     .mobile-contact-btn {
-        display: block; 
-        color:var(--primary-bg);
+        display: block;
         background-color: var(--primary-dark);
-
+        color:var(--primary-bg);
         padding: 10px 22px;
         border-radius: 50px;
         text-decoration: none;
@@ -519,110 +518,82 @@ nav {
     text-align: center;
     color: var(--primary-dark);
 }
+ .carousel-container {
+            width: 100%;
+            max-width: 1200px;
+            overflow: hidden;
+            position: relative;
+        }
 
-.tech-carousel:hover .tech-track {
-    animation-play-state: paused;
-}
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+            padding: 1rem 0;
+        }
 
-.tech-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 15px 30px rgba(13, 30, 38, 0.2);
-    border-bottom: 3px solid var(--primary-yellow);
-    z-index: 2;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
+        .carousel-item {
+            min-width: 200px;
+            height: 200px;
+            margin: 0 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
 
-.tech-logo {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin: 0 auto 15px;
-    display: block;
-}
+        .carousel-item:hover {
+            transform: scale(1.1);
+            cursor: pointer;
+        }
 
+        .carousel-item img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 1rem;
+        }
 
-.tech-card:hover .tech-logo {
-    transform: scale(1.1);
-}
+        .carousel-item h3 {
+            font-size: 1.2rem;
+            color: #333;
+        }
 
-.technologies {
-    padding: 0; 
-    margin: 0;
-    background-color: var(--secondary-light);
-    width: 100vw;
-    height: 400px;
-    overflow: hidden;
-}
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .carousel-item {
+                min-width: 160px;
+                height: 160px;
+                margin: 0 10px;
+            }
 
-.tech-carousel {
-    width: 100%; 
-    overflow: hidden;
-    height: 100%; 
-}
+            .carousel-item img {
+                width: 60px;
+                height: 60px;
+            }
 
-.tech-track {
-    display: flex;
-    gap: 30px;
-    animation: scrollCarousel 30s linear infinite;
-    width: max-content;
-    padding: 10px;
-}
+            .carousel-item h3 {
+                font-size: 1rem;
+            }
+        }
 
-.tech-card {
-    flex: 0 0 auto;
-    background-color: transparent;
-    border-radius: 12px;
-    padding: 25px;
-    width: 200px; 
-    height: 100%; 
-    text-align: center;
-    transition: all 0.3s;
-    border-bottom: 3px solid transparent;
-}
+        @media (max-width: 480px) {
+            .carousel-item {
+                min-width: 120px;
+                height: 120px;
+                margin: 0 8px;
+            }
 
-.tech-logo {
-    width: 100%; 
-    max-width: 100px; 
-    height: auto;
-    max-height: 100px;
-    margin: 0 auto 15px;
-    margin-bottom: 15px;
-}
+            .carousel-item img {
+                width: 50px;
+                height: 50px;
+            }
 
-.tech-name {
-    font-weight: bold;
-    color: var(--primary-dark);
-}
-
-@keyframes scrollCarousel {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-/* Responsividade aprimorada */
-@media (max-width: 768px) {
-    .tech-card {
-        width: 120px;
-        padding: 10px;
-    }
-
-    .tech-logo {
-        max-width: 60px;
-        max-height: 60px;
-    }
-
-    .tech-name {
-        font-size: 0.8rem;
-    }
-
-    .tech-track {
-        animation: none; /* Desativa animação automática em telas pequenas */
-    }
-}
+            .title-container h1 {
+                font-size: 2rem;
+            }
+        }
 
 
 /* Team */
