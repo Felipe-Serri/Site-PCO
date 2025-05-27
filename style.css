@@ -514,28 +514,41 @@ nav {
 
 /* Tecnologias */
 
-.section-header h2 {
-    margin-top: 40px;
-    font-size: 2rem;
-    text-align: center;
-    color: var(--primary-dark);
-}
- .carousel-container {
-    width: 100%;
-     overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    position: relative;
+.technologies {
+            background-color: #f7f5f0;
+            padding: 60px 0;
+            overflow: hidden; /* Importante para evitar overflow horizontal */
+        }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-header h2 {
+            margin-top: 40px;
+            font-size: 2rem;
+            text-align: center;
+            color: var(--primary-dark);
+            margin-bottom: 40px;
+        }
+
+        .tech-carousel {
+            width: 100%;
+            overflow: hidden; /* Esconde o overflow horizontal */
+            position: relative;
         }
 
         .carousel {
             display: flex;
-            transition: transform 0.5s ease;
-            padding: 1rem 0;
+            animation: scroll 30s linear infinite;
+            width: calc(200px * 12 + 30px * 12); /* Largura total calculada */
         }
 
         .carousel-item {
             min-width: 200px;
+            width: 200px;
             height: 200px;
             margin: 0 15px;
             display: flex;
@@ -544,6 +557,7 @@ nav {
             justify-content: center;
             text-align: center;
             transition: all 0.3s ease;
+            flex-shrink: 0; /* Impede que os itens encolham */
         }
 
         .carousel-item:hover {
@@ -563,10 +577,31 @@ nav {
             color: #333;
         }
 
-        /* Responsivo */
+        /* Animação do carrossel */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(-200px * 6 - 30px * 6)); /* Move exatamente 6 itens */
+            }
+        }
+
+        /* Pausa a animação ao passar o mouse */
+        .carousel:hover {
+            animation-play-state: paused;
+        }
+
+        /* Responsivo para tablets */
         @media (max-width: 768px) {
+            .carousel {
+                width: calc(160px * 12 + 20px * 12);
+                animation: scrollTablet 25s linear infinite;
+            }
+
             .carousel-item {
                 min-width: 160px;
+                width: 160px;
                 height: 160px;
                 margin: 0 10px;
             }
@@ -579,11 +614,35 @@ nav {
             .carousel-item h3 {
                 font-size: 1rem;
             }
+
+            @keyframes scrollTablet {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-160px * 6 - 20px * 6));
+                }
+            }
+
+            .section-header h2 {
+                font-size: 1.8rem;
+            }
         }
 
+        /* Responsivo para mobile */
         @media (max-width: 480px) {
+            .container {
+                padding: 0 10px;
+            }
+
+            .carousel {
+                width: calc(120px * 12 + 16px * 12);
+                animation: scrollMobile 20s linear infinite;
+            }
+
             .carousel-item {
                 min-width: 120px;
+                width: 120px;
                 height: 120px;
                 margin: 0 8px;
             }
@@ -593,8 +652,56 @@ nav {
                 height: 50px;
             }
 
-            .title-container h1 {
-                font-size: 2rem;
+            .carousel-item h3 {
+                font-size: 0.9rem;
+            }
+
+            @keyframes scrollMobile {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-120px * 6 - 16px * 6));
+                }
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+                margin-top: 20px;
+                margin-bottom: 30px;
+            }
+        }
+
+        /* Para telas muito pequenas */
+        @media (max-width: 320px) {
+            .carousel-item {
+                min-width: 100px;
+                width: 100px;
+                height: 100px;
+                margin: 0 5px;
+            }
+
+            .carousel-item img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-item h3 {
+                font-size: 0.8rem;
+            }
+
+            .carousel {
+                width: calc(100px * 12 + 10px * 12);
+                animation: scrollSmall 18s linear infinite;
+            }
+
+            @keyframes scrollSmall {
+                0% {
+                    transform: translateX(0);
+                }
+                100% {
+                    transform: translateX(calc(-100px * 6 - 10px * 6));
+                }
             }
         }
 
